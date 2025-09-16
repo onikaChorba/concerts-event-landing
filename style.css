@@ -307,6 +307,18 @@ h2, h3{
   border-radius: 10px;
   background: #151821;
   padding: 17px;
+  color: #E3E3E3;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: -5px;
 }
 
 .contact textarea::placeholder{
@@ -384,6 +396,57 @@ h2, h3{
 .link {
   text-decoration: none;
 color: #E3E3E3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #151821;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  color: #E7E7E7;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin: 12px 0 6px;
+  color: #A6AAB4;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2A2F3A;
+  border-radius: 6px;
+  background: #0E0F12;
+  color: #E7E7E7;
+}
+
+.modal-content input:focus{
+  outline: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
