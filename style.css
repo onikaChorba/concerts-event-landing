@@ -1,12 +1,46 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #E2E2E3;
-  background: #0E0F12;
+:root {
+  --color-text: #E2E2E3;
+  --color-text-light: #E7E7E7;
+  --color-text-muted: #A6AAB4;
+  --color-text-alt: #8B8F9A;
+  --color-text-link: #FEEEF1;
+  --color-bg: #0E0F12;
+  --color-bg-header: #0E0E12;
+  --color-bg-hero-overlay: rgba(0, 0, 0, 0.7);
+  --color-bg-section: #151821;
+  --color-bg-about: linear-gradient(to bottom right, #141A20, #1E1217);
+  --color-bg-contact: linear-gradient(to right bottom, #261219, #14232A);
+  --color-border: #2A2F3A;
+  --color-btn-primary: #FDDD14;
+  --color-btn-primary-border: #D7B516;
+  --color-btn-secondary: #F82C56;
+  --color-btn-hover: #ff4d65;
+  --color-error: #e74c3c;
+
+  --font-family: Arial, sans-serif;
+  --font-size-h1: 48px;
+  --font-size-h2: 22px;
+  --font-size-h3: 20px;
+  --font-size-base: 16px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --font-weight-extra-bold: 700;
+
+  --header-height: 74px;
+  --border-radius: 6px;
 }
 
-h2, h3{
-  color: #E7E7E7;
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h2,
+h3 {
+  color: var(--color-text-light);
 }
 
 .header-content,
@@ -24,11 +58,11 @@ h2, h3{
 
 .header {
   width: 100%;
-  height: 74px;
+  height: var(--header-height);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0E0E12;
+  background: var(--color-bg-header);
   position: sticky;
   top: 0;
 }
@@ -43,14 +77,14 @@ h2, h3{
 }
 
 .logo {
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   font-size: 20px;
 }
 
 .nav a {
   margin-left: 25px;
   text-decoration: none;
-  color: #FEEEF1;
+  color: var(--color-text-link);
 }
 
 .hero {
@@ -74,7 +108,7 @@ h2, h3{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--color-bg-hero-overlay);
   z-index: 1;
 }
 
@@ -88,7 +122,7 @@ h2, h3{
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: var(--font-size-h1);
   margin-bottom: 20px;
 }
 
@@ -99,13 +133,13 @@ h2, h3{
 .btn {
   width: fit-content;
   text-transform: uppercase;
-  background: #FDDD14;
-  border: 1px solid #D7B516;
+  background: var(--color-btn-primary);
+  border: 1px solid var(--color-btn-primary-border);
   padding: 16px 18px;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  font-weight: bold;
-  color: #FEEEF1;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-link);
 }
 
 .concerts {
@@ -115,17 +149,17 @@ h2, h3{
 }
 
 .concerts-content {
-  background: #151821;
+  background: var(--color-bg-section);
   margin-top: 60px;
-  border: 1px solid #2A2F3A;
+  border: 1px solid var(--color-border);
   border-radius: 20px;
 }
 
 .concerts-content h2 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
   padding-bottom: 20px;
-  border-bottom: 1px solid #2A2F3A;
+  border-bottom: 1px solid var(--color-border);
   padding-left: 20px;
 }
 
@@ -136,20 +170,20 @@ h2, h3{
 
 .concerts-content th {
   text-align: left;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   background: transparent;
   color: #ACB1BC;
   padding: 0px 0px 20px 20px;
 }
 
 .concerts-content td {
-  border-bottom: 1px solid #2A2F3A;
+  border-bottom: 1px solid var(--color-border);
   color: #eee;
   padding: 20px;
 }
 
 .concerts-content tr:first-child td {
-  border-top: 1px solid #2A2F3A;
+  border-top: 1px solid var(--color-border);
 }
 
 .concerts-content tr:last-child td {
@@ -157,19 +191,19 @@ h2, h3{
 }
 
 .btn.small {
-  background: #F82C56;
+  background: var(--color-btn-secondary);
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: background 0.3s ease;
-  color: #FEEEF1;
+  color: var(--color-text-link);
 }
 
 .btn.small:hover {
-  background: #ff4d65;
+  background: var(--color-btn-hover);
 }
 
 .members {
@@ -179,8 +213,8 @@ h2, h3{
 .members h2 {
   margin-bottom: 40px;
   text-align: center;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
 }
 
 .members-list {
@@ -196,12 +230,11 @@ h2, h3{
   overflow: hidden;
   max-width: 300px;
   flex: 1 1 250px;
-  border: 1px solid #2A2F3A;
+  border: 1px solid var(--color-border);
 }
 
 .member img {
   object-fit: cover;
-  overflow: hidden;
   width: 100%;
   height: 267px;
   display: block;
@@ -212,21 +245,15 @@ h2, h3{
   margin: 0;
   padding: 12px 16px;
   text-align: left;
-  color: #ccc;
-  font-size: 16px;
-  background: #151821;
-}
-
-.member p {
-  color: #8B8F9A;
-  font-weight: 600;
+  color: var(--color-text-alt);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  background: var(--color-bg-section);
 }
 
 .about {
   padding: 75px 20px 80px 20px;
-  background: linear-gradient(to bottom right,
-      #141A20,
-      #1E1217);
+  background: var(--color-bg-about);
   line-height: 1.6;
 }
 
@@ -234,7 +261,7 @@ h2, h3{
   max-width: 1170px;
   margin: 0 auto;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: var(--font-size-base);
 }
 
 .about-content img {
@@ -243,13 +270,11 @@ h2, h3{
   width: 100%;
   height: auto;
   margin: 0 0 16px 16px;
-  border: 1px solid #2A2F3A;
+  border: 1px solid var(--color-border);
 }
 
 .contact {
-  background: linear-gradient(to right bottom,
-      #261219,
-      #14232A);
+  background: var(--color-bg-contact);
   padding: 60px 20px;
 }
 
@@ -302,12 +327,11 @@ h2, h3{
   box-sizing: border-box;
   width: 100%;
   height: 42px;
-  border: none;
-  border: 1px solid #2A2F3A;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
-  background: #151821;
+  background: var(--color-bg-section);
   padding: 17px;
-  color: #E3E3E3;
+  color: var(--color-text);
 }
 
 .contact input:focus,
@@ -316,17 +340,17 @@ h2, h3{
 }
 
 .error-message {
-  color: #e74c3c;
+  color: var(--color-error);
   font-size: 13px;
   margin-top: -5px;
 }
 
-.contact textarea::placeholder{
+.contact textarea::placeholder {
   color: #686969;
 }
 
 .contact label {
-  color: #A6AAB4;
+  color: var(--color-text-muted);
 }
 
 .contact textarea {
@@ -338,27 +362,27 @@ h2, h3{
   margin-top: 20px;
   text-transform: capitalize;
   padding: 15px 33px;
-  background: #F82C56;
+  background: var(--color-btn-secondary);
   border: none;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: background 0.3s ease;
-  color: #FEEEF1;
+  color: var(--color-text-link);
 }
 
 .map {
   max-width: 50%;
   width: 100%;
-  border: 1px solid #2A2F3A;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
-  background: #151821;
+  background: var(--color-bg-section);
   padding: 17px;
 }
 
 .map h3 {
-  color: #E7E7E7;
+  color: var(--color-text-light);
 }
 
 .map iframe {
@@ -385,17 +409,17 @@ h2, h3{
   justify-content: space-between;
 }
 
-.flex-block:first-child{
+.flex-block:first-child {
   color: #AEB3BE;
 }
 
-.flex-block:first-child p a{
+.flex-block:first-child p a {
   color: #AEB3BE;
 }
 
 .link {
   text-decoration: none;
-color: #E3E3E3;
+  color: var(--color-text);
 }
 
 .modal {
@@ -409,12 +433,12 @@ color: #E3E3E3;
 }
 
 .modal-content {
-  background: #151821;
+  background: var(--color-bg-section);
   padding: 30px;
   border-radius: 10px;
   max-width: 500px;
   width: 90%;
-  color: #E7E7E7;
+  color: var(--color-text-light);
   position: relative;
 }
 
@@ -425,19 +449,19 @@ color: #E3E3E3;
 .modal-content label {
   display: block;
   margin: 12px 0 6px;
-  color: #A6AAB4;
+  color: var(--color-text-muted);
 }
 
 .modal-content input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #2A2F3A;
+  border: 1px solid var(--color-border);
   border-radius: 6px;
-  background: #0E0F12;
-  color: #E7E7E7;
+  background: var(--color-bg);
+  color: var(--color-text-light);
 }
 
-.modal-content input:focus{
+.modal-content input:focus {
   outline: none;
 }
 
